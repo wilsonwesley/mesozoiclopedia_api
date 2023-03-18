@@ -1,6 +1,14 @@
 {
+  "name": "mesozoiclopedia",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
   "dependencies": {
     "express": "^4.18.2",
-    "gitmoji-cli": "^8.0.0"
+    "gitmoji-cli": "^8.0.0",
+    "nodemon": "^2.0.21"
   }
 }
