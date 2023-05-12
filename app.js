@@ -23,6 +23,6 @@ app.use(express.json());
 
 app.use(cors());
 app.use(cookieParser());
-app.use("/dinosaur", dinosaurRouter);
+app.use("/dinosaurs", dinosaurRouter);
 
 module.exports = app;
