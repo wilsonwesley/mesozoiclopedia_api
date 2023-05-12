@@ -7,9 +7,37 @@ const dinosaurSchema = new Schema(
       type: String,
       required: true,
     },
-    city: {
+    historicalPeriod: {
       type: String,
       required: true,
+    },
+    size: {
+      type: Number,
+      required: true,
+    },
+    weight: {
+      type: Number,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: false,
+    },
+    diet: {
+      type: String,
+      enum: ["carnivore", "herbivore", "omnivore", "unknown"],
+      default: "unknown",
+      required: false,
+    },
+    environment: {
+      type: String,
+      enum: ["terrestrial", "aquatic", "aerial", "unknown"],
+      default: "unknown",
+      required: false,
+    },
+    image: {
+      type: Object,
+      required: false,
     },
   },
   {
