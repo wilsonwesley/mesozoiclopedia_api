@@ -17,6 +17,7 @@ app.get("/", function (req, res) {
 });
 
 const dinosaurRouter = require("./routes/dinosaur");
+const categoryRouter = require("./routes/category");
 
 // Sert a permettre l'envoie de données JSON dans le body d'une requête
 app.use(express.json());
@@ -24,5 +25,6 @@ app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
 app.use("/dinosaurs", dinosaurRouter);
+app.use("/categories", categoryRouter);
 
 module.exports = app;
