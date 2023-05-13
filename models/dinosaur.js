@@ -19,6 +19,10 @@ const dinosaurSchema = new Schema(
       type: Number,
       required: true,
     },
+    continent: {
+      type: String,
+      required: false,
+    },
     description: {
       type: String,
       required: false,

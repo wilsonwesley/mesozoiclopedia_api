@@ -7,8 +7,9 @@ const dinosaurCtrl = require("../controllers/dinosaur");
 router.post("/add", dinosaurCtrl.addDinosaur);
 router.get(
   "/historicalPeriod/:historicalPeriod",
-  dinosaurCtrl.filterDinosaurFromHistoricalPeriod
+  dinosaurCtrl.filterDinosaurByHistoricalPeriod
 );
+router.get("/continent/:continent", dinosaurCtrl.filterDinosaurByContinent);
 router.get("/:id", dinosaurCtrl.getDinosaurDetail);
 router.get("/", dinosaurCtrl.getAllDinosaurs);
 router.patch("/edit/:id", dinosaurCtrl.editDinosaur);
