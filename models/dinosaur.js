@@ -43,6 +43,11 @@ const dinosaurSchema = new Schema(
       type: Object,
       required: false,
     },
+    category_id: {
+      // Clé étrangère
+      type: Schema.Types.ObjectId,
+      ref: "Category",
+    },
   },
   {
     timestamps: true,
