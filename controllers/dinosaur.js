@@ -79,11 +79,28 @@ exports.editDinosaur = async (req, res) => {
 };
 
 /**
+ * Delete a dinosaur
+ * @param {Request} req
+ * @param {Response} res
+ */
+exports.deleteDinosaur = async (req, res) => {
+  try {
+    const deletingDinosaur = await Dinosaur.findByIdAndDelete(req.params.id, {
+      ...req.body,
+    });
+
+    res.status(204).json(deletingDinosaur);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+};
+
+/**
  * Retrieve all dinosaurs from the selected historical period.
  * @param {Request} req
  * @param {Response} res
  */
-exports.filterDinosaurFromHistoricalPeriod = async (req, res) => {
+exports.filterDinosaurByHistoricalPeriod = async (req, res) => {
   try {
     const dinosaurFromHistoricalPeriod = await Dinosaur.find({
       historicalPeriod: req.params.historicalPeriod,
@@ -98,17 +115,19 @@ exports.filterDinosaurFromHistoricalPeriod = async (req, res) => {
 };
 
 /**
- * Delete a dinosaur
+ * Retrieve all dinosaurs from the selected continent.
  * @param {Request} req
  * @param {Response} res
  */
-exports.deleteDinosaur = async (req, res) => {
+exports.filterDinosaurByContinent = async (req, res) => {
   try {
-    const deletingDinosaur = await Dinosaur.findByIdAndDelete(req.params.id, {
-      ...req.body,
-    });
-
-    res.status(204).json(deletingDinosaur);
+    const dinosaurFromContinent = await Dinosaur.find({
+      continent: req.params.continent,
+    }).exec();
+    if (!dinosaurFromContinent) {
+      res.status(404).json("Aucun élément n'a été trouvé");
+    }
+    res.status(200).json(dinosaurFromContinent);
   } catch (error) {
     res.status(400).json(error);
   }
