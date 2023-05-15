@@ -19,6 +19,10 @@ const dinosaurSchema = new Schema(
       type: Number,
       required: true,
     },
+    classification: {
+      type: String,
+      required: false,
+    },
     continent: {
       type: String,
       required: false,
@@ -37,6 +41,10 @@ const dinosaurSchema = new Schema(
       type: String,
       enum: ["terrestrial", "aquatic", "aerial", "unknown"],
       default: "unknown",
+      required: false,
+    },
+    discoveryYear: {
+      type: String,
       required: false,
     },
     image: {
