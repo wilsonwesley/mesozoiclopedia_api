@@ -16,6 +16,10 @@ const options = {
         url: "http://localhost:5000",
         description: "Serveur localhost",
       },
+      {
+        url: "https://mesozoiclopedia-api.onrender.com/",
+        description: "Serveur Onrender",
+      },
     ],
   },
   apis: ["./routes/*.js"],
