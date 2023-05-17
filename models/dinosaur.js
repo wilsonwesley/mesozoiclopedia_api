@@ -19,6 +19,14 @@ const dinosaurSchema = new Schema(
       type: Number,
       required: true,
     },
+    classification: {
+      type: String,
+      required: false,
+    },
+    continent: {
+      type: String,
+      required: false,
+    },
     description: {
       type: String,
       required: false,
@@ -35,9 +43,18 @@ const dinosaurSchema = new Schema(
       default: "unknown",
       required: false,
     },
+    discoveryYear: {
+      type: String,
+      required: false,
+    },
     image: {
       type: Object,
       required: false,
+    },
+    category_id: {
+      // Clé étrangère
+      type: Schema.Types.ObjectId,
+      ref: "Category",
     },
   },
   {
