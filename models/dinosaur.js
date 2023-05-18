@@ -13,11 +13,11 @@ const dinosaurSchema = new Schema(
     },
     size: {
       type: Number,
-      required: true,
+      required: false,
     },
     weight: {
       type: Number,
-      required: true,
+      required: false,
     },
     classification: {
       type: String,
