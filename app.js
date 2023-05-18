@@ -17,7 +17,7 @@ db.then(() => {
 const app = express();
 app.get("/", function (req, res) {
   res.send(
-    "Hello there, you can fnd this API documentation here: https://mesozoiclopedia-api.onrender.com/api-docs/"
+    "Hello there, the API documentation is available on: https://mesozoiclopedia-api.onrender.com/api-docs/"
   );
 });
 
