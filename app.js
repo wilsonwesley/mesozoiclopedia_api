@@ -16,7 +16,9 @@ db.then(() => {
 
 const app = express();
 app.get("/", function (req, res) {
-  res.send("Hello world");
+  res.send(
+    "Hello there, you can fnd this API documentation here: https://mesozoiclopedia-api.onrender.com/api-docs/"
+  );
 });
 
 // setup defini dans le dossier docs
