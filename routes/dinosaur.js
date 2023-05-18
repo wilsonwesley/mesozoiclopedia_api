@@ -71,7 +71,7 @@ const dinosaurCtrl = require("../controllers/dinosaur");
  *         createdAt: 2023-05-17T17:38:27.772Z
  * /dinosaurs/historicalPeriod/{historicalPeriod}:
  *   get:
- *     summary: Retrieve all dinosaurs from the given historicalPeriod. (ex - mesozoic)
+ *     summary: Retrieve all dinosaurs from the given historicalPeriod. (ex - jurassic, mesozoic, cretaceous)
  *     tags: [Dinosaur]
  *     parameters:
  *       - in: path
@@ -95,7 +95,7 @@ const dinosaurCtrl = require("../controllers/dinosaur");
  *          description: Impossible d'accéder à la liste demandée.
  * /dinosaurs/continent/{continent}:
  *   get:
- *     summary: Retrieve all dinosaurs from the given continent. (ex - Europe)
+ *     summary: Retrieve all dinosaurs from the given continent. (ex - europe, asia, america, africa, aceania)
  *     tags: [Dinosaur]
  *     parameters:
  *       - in: path
@@ -143,7 +143,7 @@ const dinosaurCtrl = require("../controllers/dinosaur");
  *          description: Impossible d'accéder à la liste demandée.
  * /dinosaurs/diet/{diet}:
  *   get:
- *     summary: Retrieve all dinosaurs from the given diet. (ex - carnivore)
+ *     summary: Retrieve all dinosaurs from the given diet. (ex - carnivore, herbivore, omnivore)
  *     tags: [Dinosaur]
  *     parameters:
  *       - in: path
@@ -167,7 +167,7 @@ const dinosaurCtrl = require("../controllers/dinosaur");
  *          description: Impossible d'accéder à la liste demandée.
  * /dinosaurs/environment/{environment}:
  *   get:
- *     summary: Retrieve all dinosaurs from the given environment. (ex - aquatic)
+ *     summary: Retrieve all dinosaurs from the given environment. (ex - terrestrial, aquatic, aerial)
  *     tags: [Dinosaur]
  *     parameters:
  *       - in: path
