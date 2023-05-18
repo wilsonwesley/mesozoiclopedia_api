@@ -13,12 +13,12 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:5000",
-        description: "Serveur localhost",
-      },
-      {
         url: "https://mesozoiclopedia-api.onrender.com/",
         description: "Serveur Onrender",
+      },
+      {
+        url: "http://localhost:5000",
+        description: "Serveur localhost",
       },
     ],
   },
